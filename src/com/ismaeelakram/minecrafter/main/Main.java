@@ -10,7 +10,7 @@ public class Main {
 
     public static JDA jda;
 
-    public static final String token = "NzIxODc0NTQ4Njk3NTk1OTQ0.Xua4aA.JFHg1Paq6YgFS3eMpVIe4lQALK4";
+    public static final String token = "TOKEN";
     public static final String prefix = ".";
 
     public static void main(String[] args) throws LoginException {
