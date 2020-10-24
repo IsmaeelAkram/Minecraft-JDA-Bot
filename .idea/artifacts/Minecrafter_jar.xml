@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Minecrafter:jar">
+    <output-path>G:/</output-path>
+    <root id="archive" name="Minecrafter.jar">
+      <element id="module-output" name="Minecrafter" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/JDA-4.1.1_101-withDependencies.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/gson-2.8.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

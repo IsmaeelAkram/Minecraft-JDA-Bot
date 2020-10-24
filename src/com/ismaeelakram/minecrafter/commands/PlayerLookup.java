@@ -13,12 +13,12 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class PlayerLookupCommand extends Command {
-    public PlayerLookupCommand(){
+public class PlayerLookup extends Command {
+    public PlayerLookup(){
         this.name = "lookup";
         this.description = "Look up a player's history in Minecraft.";
         this.aliases = new String[]{"info", "player"};
-        this.permission = Permission.KICK_MEMBERS;
+        this.permission = Permission.UNKNOWN;
     }
 
     @Override
@@ -38,6 +38,7 @@ public class PlayerLookupCommand extends Command {
         embed.setColor(Color.green);
         embed.setTitle(playerName + "'s Player Info");
         embed.addField(new MessageEmbed.Field("UUID", playerUUID, true, true));
+        embed.setFooter("ismaeelakram.com | Mahjestic#9700");
 
         final String[] playerNamesText = {""};
         playerNames.forEach(name -> {

@@ -1,6 +1,6 @@
 package com.ismaeelakram.minecrafter.main;
 
-import com.ismaeelakram.minecrafter.commands.PlayerLookupCommand;
+import com.ismaeelakram.minecrafter.commands.*;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -14,7 +14,6 @@ public class CommandListener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        System.out.println(event.getAuthor().getName() + ": " + event.getMessage().getContentRaw());
         if(!event.getMessage().getContentRaw().startsWith(Main.prefix)) return;
 
         String command = event.getMessage().getContentRaw().split(" ")[0].replace(Main.prefix, "");
@@ -51,6 +50,10 @@ public class CommandListener extends ListenerAdapter {
 
     public void InitCommands()
     {
-        CommandList.add(new PlayerLookupCommand());
+        CommandList.add(new PlayerLookup());
+        CommandList.add(new ServerStatus());
+        CommandList.add(new SkinGrabber());
+        CommandList.add(new VerifyAccount());
+        CommandList.add(new Help());
     }
 }
