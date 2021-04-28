@@ -33,11 +33,16 @@ public class PlayerLookup extends Command {
             event.getChannel().sendMessage(new EmbedBuilder().setColor(Color.RED).setTitle("Player not found.").build()).queue();
         }
         playerNames = (ArrayList) API.getPlayerNames(playerUUID);
+        String skinURL = API.getSkin(playerUUID);
+        if(skinURL == null){
+            skinURL = "https://i.imgur.com/P8Yt5NC.png";
+        }
 
         EmbedBuilder embed = new EmbedBuilder();
         embed.setColor(Color.green);
         embed.setTitle(playerName + "'s Player Info");
         embed.addField(new MessageEmbed.Field("UUID", playerUUID, true, true));
+        embed.setThumbnail(skinURL);
         embed.setFooter("ismaeelakram.com | Mahjestic#9700");
 
         final String[] playerNamesText = {""};
