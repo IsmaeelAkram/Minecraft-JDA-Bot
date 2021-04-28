@@ -11,16 +11,18 @@ public class Main {
 
     public static JDA jda;
 
-    public static final String token = "NzYzMTQ2NTYyNTI0MDIwNzc3.X3zdnw.7JRaAQAx0P_lhNLz5USolbuhdyc";
+    public static final String token = System.getenv("TOKEN");
     public static final String prefix = "mc!";
 
     public static void main(String[] args) throws LoginException {
-        jda = new JDABuilder().setToken(token).setActivity(Activity.playing("mc!help")).build();
+        System.out.println("Token is " + token);
 
         CommandListener commandListener = new CommandListener();
-        commandListener.InitCommands();
 
-        jda.addEventListener(commandListener);
+        jda = JDABuilder.createDefault(token)
+                .addEventListeners(commandListener)
+                .setActivity(Activity.playing("mc!help"))
+                .build();
     }
 
 }
