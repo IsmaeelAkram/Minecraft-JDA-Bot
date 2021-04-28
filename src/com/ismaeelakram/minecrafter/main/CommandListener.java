@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommandListener extends ListenerAdapter {
+    public CommandListener() {
+        this.InitCommands();
+    }
     public List<Command> CommandList = new ArrayList<Command>();
 
     @Override
@@ -50,6 +53,7 @@ public class CommandListener extends ListenerAdapter {
 
     public void InitCommands()
     {
+        System.out.println("Initializing commands");
         CommandList.add(new PlayerLookup());
         CommandList.add(new ServerStatus());
         CommandList.add(new SkinGrabber());
