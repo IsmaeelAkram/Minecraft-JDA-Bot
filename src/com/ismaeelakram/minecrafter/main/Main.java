@@ -17,10 +17,8 @@ public class Main {
     public static void main(String[] args) throws LoginException {
         System.out.println("Token is " + token);
 
-        CommandListener commandListener = new CommandListener();
-
         jda = JDABuilder.createDefault(token)
-                .addEventListeners(commandListener)
+                .addEventListeners(new CommandListener())
                 .setActivity(Activity.playing("mc!help"))
                 .build();
     }
