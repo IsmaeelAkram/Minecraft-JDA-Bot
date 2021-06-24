@@ -19,7 +19,7 @@ public class Main {
 
         jda = JDABuilder.createDefault(token)
                 .addEventListeners(new CommandListener())
-                .setActivity(Activity.playing("mc!help"))
+                .setActivity(Activity.playing("Minecraft"))
                 .build();
     }
 
