@@ -59,5 +59,6 @@ public class CommandListener extends ListenerAdapter {
         CommandList.add(new SkinGrabber());
         CommandList.add(new VerifyAccount());
         CommandList.add(new Help());
+        CommandList.add(new Ping());
     }
 }
