@@ -17,5 +17,6 @@ public class Ping extends Command {
     public void execute(String[] args, MessageReceivedEvent event) {
         EmbedBuilder embed = new EmbedBuilder();
         embed.setTitle("🏓 Pong!");
+        event.getChannel().sendMessage(embed.build()).queue();
     }
 }
